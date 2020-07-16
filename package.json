@@ -1,10 +1,10 @@
 {
-  "name": " ",
+  "name": "css-base-styles",
   "version": "0.0.1",
-  "description": "",
+  "description": "A base stylesheet for my projects",
   "keywords": "",
   "license": "",
-  "author": "",
+  "author": "Andre Parsons",
   "scripts": {
     "build": "parcel build index.html",
     "dev": "parcel index.html --open",
