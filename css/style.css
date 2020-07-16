@@ -40,21 +40,73 @@
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
   --level-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+  /* postitioning */
+  --containerPadding: 2.5%;
+  --headerHeight: 3rem;
 }
 
 /* typescale */
 
 html {
   font-size: var(--baseFontSize);
+  box-sizing: border-box;
 } /*18px*/
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 
 body {
   font-weight: 400;
   line-height: 1.65;
-  padding-bottom: 300px;
   background: var(--background);
   color: var(--text-colour);
   font-family: var(--bodyFont);
+}
+
+header {
+  --headerBackground: var(--darkBlue);
+  color: white;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: var(--headerHeight);
+  background: var(--headerBackground);
+  box-shadow: var(--level-2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 var(--containerPadding);
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+}
+
+header nav a + a {
+  margin-left: 10px;
+}
+
+footer {
+  --footerTextColor: var(--lightGrey);
+  color: var(--footerTextColor);
+  background: var(--black);
+  padding: 2rem var(--containerPadding);
+  text-align: center;
+}
+
+footer a {
+  color: var(--footerTextColor);
+}
+
+footer p {
+  margin-bottom: 0;
+  max-width: none;
 }
 
 p {
@@ -184,7 +236,7 @@ button.small {
 
 .layout {
   margin: 0 auto;
-  width: 95%;
+  padding: calc(3rem + var(--headerHeight)) var(--containerPadding);
 }
 
 .grid {
@@ -218,4 +270,9 @@ button.small {
   .flex {
     display: flex;
   }
+}
+
+.logo {
+  font-size: var(--baseFontSize);
+  margin: 0;
 }
