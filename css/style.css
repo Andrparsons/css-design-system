@@ -5,6 +5,7 @@
   --yellow: #fde24f;
   --black: #1b2d45;
   --darkBlue: #00214d;
+  --lightBlue: #d8eefe;
   --grey: #bfbfbf;
   --lightGrey: #f2f4f6;
   --white: #fff;
@@ -22,6 +23,7 @@
   --cardBg: var(--white);
   --headerBackground: var(--darkBlue);
   --footerBackground: var(--black);
+  --sidebarBackground: var(--lightBlue);
 
   /* styles */
   --line: solid 1px var(--lineColour);
@@ -233,6 +235,11 @@ button.small {
   font-size: var(--smallText);
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 /* components */
 
 .layout {
@@ -310,7 +317,55 @@ button.small {
   height: 500px;
 }
 
-/* Theme playgrond */
+.ex-box {
+  padding: 0.5em;
+  border-radius: var(--borderRadius);
+  text-align: center;
+  background: var(--yellow);
+  font-size: 2rem;
+  font-family: var(--headingFont);
+  margin: 5px;
+}
+
+/* centred */
+
+.centred-parent {
+  display: grid;
+  place-items: center;
+}
+
+/* responsive stacks */
+
+.rs-parent {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.rs-child {
+  flex: 1 1 150px;
+}
+
+/* sidebar */
+
+.sb-parent {
+  display: grid;
+  grid-template-columns: minmax(150px, 25%) 1fr;
+}
+
+.sb-sidebar {
+  background: var(--sidebarBackground);
+}
+
+/* responsive cards */
+
+.rc-parent {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  height: auto;
+}
+
+/* Theme playground */
 
 .dark {
   --background: var(--black);
