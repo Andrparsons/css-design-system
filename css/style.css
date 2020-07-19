@@ -169,7 +169,6 @@ small,
 }
 
 blockquote {
-  margin-left: 10px;
   padding: 2em;
   background: var(--cardBg);
   box-shadow: var(--level-3);
